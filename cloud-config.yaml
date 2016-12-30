@@ -16,6 +16,13 @@ coreos:
       command: start
     - name: fleet.service
       command: start
+    - name: flanneld.service
+      drop-ins:
+        - name: 50-network-config.conf
+          content: |
+            [Service]
+            ExecStartPre=/usr/bin/ln -sf /etc/flannel/options.env /run/flannel/options.env
+            ExecStartPre=/usr/bin/etcdctl set /coreos.com/network/config '{ "Network": "10.1.0.0/16" }'
 users:
   - name: niels
     shell: /bin/bash
