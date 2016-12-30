@@ -1,9 +1,7 @@
 #cloud-config
 coreos:
-  etcd:
-    name: kubernete01
-    discovery: https://discovery.etcd.io/bdf216bffa56f49455bc2ffbdc34dbd4
   etcd2:
+    name: kubernete01
     # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=3
     discovery: "https://discovery.etcd.io/bdf216bffa56f49455bc2ffbdc34dbd4"
     # multi-region and multi-cloud deployments need to use $public_ipv4
