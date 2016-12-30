@@ -1,7 +1,7 @@
 #cloud-config
 coreos:
-    units:
-        - name: etcd2.service
-        command: start
-        - name: fleet.service
-        command: start
+  units:
+    - name: etcd2.service
+      command: start
+    - name: fleet.service
+      command: start
