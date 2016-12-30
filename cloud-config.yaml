@@ -1,5 +1,8 @@
 #cloud-config
 coreos:
+  etcd:
+    name: kubernete01
+    discovery: https://discovery.etcd.io/bdf216bffa56f49455bc2ffbdc34dbd4
   units:
     - name: etcd2.service
       command: start
