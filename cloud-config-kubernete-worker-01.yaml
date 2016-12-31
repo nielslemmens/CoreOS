@@ -25,4 +25,4 @@ users:
     ssh-authorized-keys:
       - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAy/i8v/mePuDWNnux24RKQ6KIyZx+1JIvmDkLkKPTv81gKpu/Ja/u6EXKOnSjT5tmYb97gx8YSoz4eBh5PwZ8q4BUlKCJP2QxTE9VV9Jwkfgz3sRqCOhLrbrCgZKGhJ8ugvS4mFGgiWqKFykz1UTRQ6IkChvO8yzieXQOOG1B9+duFnFF6ywPutnxTrZBRmly20lItPbNlol6ekH2fyZYo85t45jV7arkdA9sksjV022ssZXs5blRq1iJCO5l0fFb1sLFCPVBJW1Z2zebnMsOQk+g+XWp4iWSuB3o50DZRkbOLmFH8nkrnEotWssGQzCbCD53XJBX46TAD3r3A7/YPw== core
     groups:
-      - "sudo"
+      - "sudo" 
