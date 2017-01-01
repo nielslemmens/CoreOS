@@ -14,24 +14,6 @@ coreos:
   units:
     - name: etcd2.service
       command: start
-    - name: fleet.service
-      command: start
-    - name: flanneld.service
-      drop-ins:
-        - name: 40-ExecStartPre-symlink.conf
-          content: |
-            [Service]
-            ExecStartPre=/usr/bin/ln -sf /etc/flannel/options.env /run/flannel/options.env
-      command: start
-    - name: "docker.service"
-      drop-ins:
-        - name: "40-flannel.conf"
-          content: |
-            [Unit]
-            Requires=flanneld.service
-            After=flanneld.service
-            [Service]
-            EnvironmentFile=/etc/kubernetes/cni/docker_opts_cni.env
 users:
   - name: niels
     shell: /bin/bash
