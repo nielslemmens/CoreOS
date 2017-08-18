@@ -5,8 +5,8 @@ coreos:
     # generate a new token for each unique cluster from https://discovery.etcd.io/new?size=3
     discovery: "https://discovery.etcd.io/fe6533d8483e70750d46b4fd084f5437"
     # multi-region and multi-cloud deployments need to use $public_ipv4
-    advertise-client-urls: "http://$public_ipv4:2379"
-    initial-advertise-peer-urls: "http://$private_ipv4:2380"
+    advertise-client-urls: "http://192.168.56.100:2379"
+    initial-advertise-peer-urls: "http://192.168.56.100:2380"
     # listen on both the official ports and the legacy ports
     # legacy ports can be omitted if your application doesn't depend on them
     listen-client-urls: "http://0.0.0.0:2379,http://0.0.0.0:4001"
@@ -36,6 +36,6 @@ users:
   - name: niels
     shell: /bin/bash
     ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAy/i8v/mePuDWNnux24RKQ6KIyZx+1JIvmDkLkKPTv81gKpu/Ja/u6EXKOnSjT5tmYb97gx8YSoz4eBh5PwZ8q4BUlKCJP2QxTE9VV9Jwkfgz3sRqCOhLrbrCgZKGhJ8ugvS4mFGgiWqKFykz1UTRQ6IkChvO8yzieXQOOG1B9+duFnFF6ywPutnxTrZBRmly20lItPbNlol6ekH2fyZYo85t45jV7arkdA9sksjV022ssZXs5blRq1iJCO5l0fFb1sLFCPVBJW1Z2zebnMsOQk+g+XWp4iWSuB3o50DZRkbOLmFH8nkrnEotWssGQzCbCD53XJBX46TAD3r3A7/YPw== core
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCs8ssMogJ1dUGgi7kCnL4GLye/+B/ywMNtkT2Mznm9mIbrBVn6cVeF8GSIu4KKHv4/BHuI3on19PZQtzHxW2WNvxOEyyKqjLUdX76JI1Fckow9luLIJMo2AIfOd/7R/XENsjsZlUtMDVB3C7lzDBwO9w1yv+mUOdiBzpGul5Tgnsi6vffmqpB2DrZKJyssJcMNbNyjtMZ9X/vqr8Sb9qzZM5nNROMjdhGBF87ILwvZIM5wV4GDOdLVcgToqKDikWrU7Ird4hn238SpJtYmNEX3qu5+dRn8PPTbFCZyB+b2ASgVS/a+PyRJR8F/keE5vrPVk0BulgVDTnVkiyV3xwah core
     groups:
       - "sudo"
