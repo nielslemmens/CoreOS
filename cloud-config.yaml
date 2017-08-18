@@ -32,10 +32,11 @@ coreos:
             After=flanneld.service
             [Service]
             EnvironmentFile=/etc/kubernetes/cni/docker_opts_cni.env
-users:
-  - name: niels
-    shell: /bin/bash
-    ssh-authorized-keys:
-      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCs8ssMogJ1dUGgi7kCnL4GLye/+B/ywMNtkT2Mznm9mIbrBVn6cVeF8GSIu4KKHv4/BHuI3on19PZQtzHxW2WNvxOEyyKqjLUdX76JI1Fckow9luLIJMo2AIfOd/7R/XENsjsZlUtMDVB3C7lzDBwO9w1yv+mUOdiBzpGul5Tgnsi6vffmqpB2DrZKJyssJcMNbNyjtMZ9X/vqr8Sb9qzZM5nNROMjdhGBF87ILwvZIM5wV4GDOdLVcgToqKDikWrU7Ird4hn238SpJtYmNEX3qu5+dRn8PPTbFCZyB+b2ASgVS/a+PyRJR8F/keE5vrPVk0BulgVDTnVkiyV3xwah core
-    groups:
-      - "sudo"
+passwd:
+    users:
+      - name: niels
+        shell: /bin/bash
+        ssh-authorized-keys:
+          - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCs8ssMogJ1dUGgi7kCnL4GLye/+B/ywMNtkT2Mznm9mIbrBVn6cVeF8GSIu4KKHv4/BHuI3on19PZQtzHxW2WNvxOEyyKqjLUdX76JI1Fckow9luLIJMo2AIfOd/7R/XENsjsZlUtMDVB3C7lzDBwO9w1yv+mUOdiBzpGul5Tgnsi6vffmqpB2DrZKJyssJcMNbNyjtMZ9X/vqr8Sb9qzZM5nNROMjdhGBF87ILwvZIM5wV4GDOdLVcgToqKDikWrU7Ird4hn238SpJtYmNEX3qu5+dRn8PPTbFCZyB+b2ASgVS/a+PyRJR8F/keE5vrPVk0BulgVDTnVkiyV3xwah core
+        groups:
+          - "sudo"
